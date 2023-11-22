@@ -33,4 +33,10 @@ def plot_scatter(ax, data):
 np.random.seed(0); data = np.random.randn(100, 2)
 fig, axes = plt.subplots(2, 2, figsize=(12, 10))
 
-plt.tight_layout(); plt.show()
+descriptive_stats_plot(a, b, axes[0, 0])
+correlation_heatmap(data, axes[0, 1])
+histogram_plot(a, b, axes[1, 0])
+scatter_plot(a, b, axes[1, 1])
+
+plt.tight_layout()
+plt.show()
